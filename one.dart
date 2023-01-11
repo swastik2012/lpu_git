@@ -6,6 +6,7 @@
 
 // changes
 
+// import 'dart:html';
 import 'dart:io';
 
 void main(List<String> args) {
@@ -58,8 +59,16 @@ void main(List<String> args) {
       // String = "Paneer Butter Masala | 300.5"
 
       printAns();
-      print(
-          MakeFullNameNamedArguments(firstName: "Swastik" ));
+      print(MakeFullNameNamedArguments(firstName: "Swastik"));
+
+      List<String> myStringList = ["cake", "pastry", "pasta", "cake"];
+      myStringList.add("BUtter Masala");
+      myStringList.removeWhere((Element)=> (Element=="cake"));
+      myStringList.sort();
+      print(myStringList.isEmpty);
+      print(myStringList.reversed);
+      print(myStringList.length);
+      print(myStringList);
   }
 }
 
@@ -86,7 +95,6 @@ void printAns() {
   print("$name is of price $price");
 }
 
-String MakeFullNameNamedArguments({String? firstName, String? LastName="Chef"}) =>
+String MakeFullNameNamedArguments(
+        {String? firstName, String? LastName = "Chef"}) =>
     "$firstName $LastName";
-
-
