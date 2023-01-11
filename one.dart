@@ -63,12 +63,16 @@ void main(List<String> args) {
 
       List<String> myStringList = ["cake", "pastry", "pasta", "cake"];
       myStringList.add("BUtter Masala");
-      myStringList.removeWhere((Element)=> (Element=="cake"));
+      myStringList.removeWhere((Element) => (Element == "cake"));
       myStringList.sort();
       print(myStringList.isEmpty);
       print(myStringList.reversed);
       print(myStringList.length);
       print(myStringList);
+
+      List<int> updatedListLengthd =
+          myStringList.map((e) => e.length).toList();
+      print(updatedListLengthd);
   }
 }
 
